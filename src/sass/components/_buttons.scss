@@ -1,0 +1,61 @@
+// Button Model 1
+.btn-base.model-1 {
+   cursor:        pointer;
+   border:        none;
+   display:       inline-block;
+   overflow:      hidden;
+   background:    none;
+   border-radius: 999px;
+   transition:    scale .3s ease;
+   
+   &:active {
+      scale:   1.08;
+      opacity: 0.80;
+   }
+   
+   .btn-link {
+      width:           100%;
+      display:         flex;
+      padding:         10px 24px;
+      max-width:       content-width;
+      text-decoration: none;
+      
+      span {
+         display:       inline-block;
+         overflow:      hidden;
+         max-width:     100px;
+         white-space:   nowrap;
+         font-weight:   555;
+         font-weight:   800;
+         margin-inline: auto;
+         text-overflow: ellipsis;
+         font-family:   "-", serif;
+      }
+   }
+   
+   .btn-link.type-cta {
+      background-color: var(--accent-color);
+      color:            white;
+   }
+   
+   .btn-link.type-basic {
+      background: white;
+      color:      black;
+   }
+   .btn-link.type-soft {
+      border:        1px solid var(--font-color-medium);
+      border-radius: 999px;
+      color:         var(--font-color-medium);
+   }
+}
+
+// Inline Link Button
+.link-label {
+   font-size: 24px;
+   font-weight: medium;
+   color: var(--font-color-low);
+   
+   &:hover {
+      color: var(--font-color-medium);
+   }
+}

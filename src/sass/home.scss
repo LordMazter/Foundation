@@ -1,0 +1,17 @@
+// @Page 
+@use 'pages/_home.scss';
+
+// @Commons
+@use 'common/_formatting.scss';
+@use 'common/_variables.scss';
+@use 'common/_mixins.scss';
+@use 'common/_theme.scss';
+
+// @Layout 
+@use 'layout/_basis.scss';
+
+// @Components
+@use 'components/_buttons.scss';
+@use 'components/_cards.scss';
+@use 'components/_icons.scss';
+@use 'components/_header.scss';

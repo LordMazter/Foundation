@@ -1,0 +1,14 @@
+.icon-base {
+   font-size: 28px;
+   width: 30px;
+   color: var(--font-color-low);
+   transition: color .3s ease;
+   
+   &:hover {
+      color: var(--font-color-medium);
+   }
+}
+
+.icon-base.active {
+   color: var(--accent-blue);
+}

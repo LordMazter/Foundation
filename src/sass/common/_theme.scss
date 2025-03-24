@@ -1,0 +1,13 @@
+/* LIGHT MODE */
+body {
+   background: var(--bgn-secondary);
+}
+
+/* DARK MODE */
+body.dark-theme {
+   // background
+   --bgn-primary: #000000;
+   
+   // Accent Colors
+   --accent-color: ;
+}

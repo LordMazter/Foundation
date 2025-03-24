@@ -1,0 +1,33 @@
+main {
+   padding-left: 120px;
+}
+@media (max-width: 440px) {
+   main {
+      padding-left: 0;
+   }
+}
+
+.section-model {
+   width: 100vw;
+   min-height: 100vh;
+}
+
+// Screen Control Width 
+.basis-layout {
+   width:         calc(100% - 80px);
+   max-width:     1024px;
+   margin-inline: 80px;
+}
+@media (max-width: 440px) {
+   .basis-layout {
+      width: calc(100% - 40px);
+      margin-inline: auto;
+   }
+}
+
+// Screen Control Width in-mobile
+@media (max-width: 440px) {
+   .basis-layout {
+      width: calc(100% - 40px);
+   }
+}

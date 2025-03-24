@@ -1,0 +1,42 @@
+/* @Pages */
+/* Commons */
+/* @FORMAT :::::::::::::::::::::::::::::::::: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+:root {
+  --bgn-primary: #fff;
+  --accent-color: ;
+}
+
+body.dark-theme {
+  --bgn-primary: #000;
+  --accent-color: ;
+}
+
+.basis-layout {
+  width: calc(100% - 80px);
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+@media (max-width: 440px) {
+  .basis-layout {
+    width: calc(100% - 40px);
+  }
+}
+
+/*# sourceMappingURL=campains.css.map */
