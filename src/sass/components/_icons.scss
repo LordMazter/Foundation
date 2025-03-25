@@ -1,8 +1,10 @@
 .icon-base {
-   font-size: 28px;
-   width: 30px;
-   color: var(--font-color-low);
+   font-size:  28px;
+   width:      30px;
+   min-height: 30px;
+   color:      var(--font-color-low);
    transition: color .3s ease;
+   cursor:     pointer;
    
    &:hover {
       color: var(--font-color-medium);

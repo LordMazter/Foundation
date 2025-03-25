@@ -1,26 +1,21 @@
-main {
-   padding-left: 120px;
-}
-@media (max-width: 440px) {
-   main {
-      padding-left: 0;
-   }
-}
+
 
 .section-model {
-   width: 100vw;
+   width:      100%;
    min-height: 100vh;
+   max-height: content-height;
+   padding:    40px 0;
 }
 
 // Screen Control Width 
 .basis-layout {
-   width:         calc(100% - 80px);
-   max-width:     1024px;
-   margin-inline: 80px;
+   width:     100%;
+   max-width: 1024px;
+   margin:    0 20px 20px 180px;
 }
 @media (max-width: 440px) {
    .basis-layout {
-      width: calc(100% - 40px);
+      width:         calc(100% - 40px);
       margin-inline: auto;
    }
 }
