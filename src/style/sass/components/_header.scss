@@ -14,8 +14,22 @@
       overflow: hidden;
       
       .link-page {
-         display:     flex;
-         align-items: center;
+         display:       flex;
+         align-items:   center;
+         border-radius: 12px;
+         flex-grow:     1;
+         
+         &:not(.current-link):hover {
+            background: var(--bgn-secondary);
+         }
+      }
+      .current-link {
+         background: var(--accent-blue-light);
+         
+         .link-label {
+            color:       var(--accent-blue) !important;
+            font-weight: 555;
+         }
       }
    }
 }
@@ -43,32 +57,17 @@
       .link-page {
          gap:           28px;
          padding:       16px;
-         border-radius: 12px;
          
          .link-label {
             opacity:     0;
             font-size:   24px;
-            font-weight: medium;
             color:       var(--font-color-low);
             
             &:hover {
-               color: var(--font-color-medium);
+               color: var(--font-color-low);
             }
          }
       }
-      .current-link {
-         background: var(--bgn-modal-low);
-         
-         .icon-base {
-            color: var(--font-color-medium);
-         }
-         
-         .link-label {
-            color:       var(--font-color-medium);
-            font-weight: 555;
-         }
-      }
-      
    }
    &:hover {
       width: 400px;
@@ -79,8 +78,17 @@
       }
    }
    .theme-controler {
-      padding:    20px 26px 0 26px;
-      margin-top: auto;
+      display:         flex;
+      justify-content: center;
+      align-items:     center;
+      border-radius:   999px;
+      margin:          auto auto -9px 9px;
+      padding:         16px;
+      transition:      background .3s ease;
+      
+      &:hover {
+         background: var(--bgn-modal-low);
+      }
    }
 }
 @media (max-width: 540px) {
@@ -98,7 +106,6 @@
    bottom: 10px;
    
    .navigation {
-      justify-content: space-evenly;
       
       .link-page {
          flex-direction:  column;
@@ -108,25 +115,31 @@
          
          .link-label {
             font-size: 13px;
-            color:     var(--font-color-low);
+            color: var(--font-color-low);
          }
       }
       .current-link {
-         background:    var(--bgn-modal-base);
-         border-radius: 12px;
          padding:       6px 9px;
-         font-weight:   555;
-         color:         var(--font-color-medium);
       }
    }
 }
 
 @media (min-width: 540px) {
-   .header-nav.on-mobile {
+   .header-nav.on-mobile, .selective-manu {
       display: none;
    }
 }
 
+// HEADER CONTROLER ON MOBILE
+.selective-manu.on-mobile {
+   min-height: 80px;
+   border-radius: 999px;
+   background: tomato;
+   
+   .logo-area {
+      display: none;
+   }
+}
 
 // HEADER LOGO
 .full-logo {

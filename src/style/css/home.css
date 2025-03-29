@@ -1,3 +1,14 @@
+/* @mixin flex-center {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   background-color: black;
+} */
+/* div {
+   @include flex-center;
+   width: 500px;
+   height: 300px;
+} */
 /* @FORMAT :::::::::::::::::::::::::::::::::: */
 * {
   margin: 0;
@@ -17,11 +28,11 @@ a {
 
 :root {
   --bgn-primary: #FFFFFF;
-  --bgn-secondary: #F5F5F5;
+  --bgn-secondary: #FAFAFA;
   --bgn-terceary: #D3D5D6;
   --bgn-modal-base: #41444817;
   --bgn-modal-medium: #41444825;
-  --bgn-modal-low: #4144480c;
+  --bgn-modal-low: #4144480C;
   --font-color-base: #0e0f0f;
   --font-color-medium: #2e2e31;
   --font-color-low: #515151;
@@ -50,21 +61,22 @@ body.dark-theme {
   padding: 40px 0;
 }
 
+@media (max-width: 440px) {
+  .section-model {
+    padding: 20px 0;
+  }
+}
 .basis-layout {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 20px 20px 180px;
+  width: calc(100% - 290px);
+  max-width: 1124px;
+  margin-left: 180px;
+  background: var(--bgn-modal-base);
 }
 
-@media (max-width: 440px) {
+@media (max-width: 540px) {
   .basis-layout {
     width: calc(100% - 40px);
     margin-inline: auto;
-  }
-}
-@media (max-width: 440px) {
-  .basis-layout {
-    width: calc(100% - 40px);
   }
 }
 .btn-base.model-1 {
@@ -117,11 +129,12 @@ body.dark-theme {
   width: 30px;
   min-height: 30px;
   color: var(--font-color-low);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, scale 0.2s ease;
   cursor: pointer;
 }
 .icon-base:hover {
   color: var(--font-color-medium);
+  scale: 1.05;
 }
 
 .icon-base.active {
@@ -145,6 +158,18 @@ body.dark-theme {
 .header-nav .navigation .link-page {
   display: flex;
   align-items: center;
+  border-radius: 12px;
+  flex-grow: 1;
+}
+.header-nav .navigation .link-page:not(.current-link):hover {
+  background: var(--bgn-secondary);
+}
+.header-nav .navigation .current-link {
+  background: var(--accent-blue-light);
+}
+.header-nav .navigation .current-link .link-label {
+  color: var(--accent-blue) !important;
+  font-weight: 555;
 }
 
 .header-nav.on-desktop {
@@ -168,26 +193,14 @@ body.dark-theme {
 .header-nav.on-desktop .navigation .link-page {
   gap: 28px;
   padding: 16px;
-  border-radius: 12px;
 }
 .header-nav.on-desktop .navigation .link-page .link-label {
   opacity: 0;
   font-size: 24px;
-  font-weight: medium;
   color: var(--font-color-low);
 }
 .header-nav.on-desktop .navigation .link-page .link-label:hover {
-  color: var(--font-color-medium);
-}
-.header-nav.on-desktop .navigation .current-link {
-  background: var(--bgn-modal-low);
-}
-.header-nav.on-desktop .navigation .current-link .icon-base {
-  color: var(--font-color-medium);
-}
-.header-nav.on-desktop .navigation .current-link .link-label {
-  color: var(--font-color-medium);
-  font-weight: 555;
+  color: var(--font-color-low);
 }
 .header-nav.on-desktop:hover {
   width: 400px;
@@ -197,8 +210,16 @@ body.dark-theme {
   transition: opacity 0.4s ease;
 }
 .header-nav.on-desktop .theme-controler {
-  padding: 20px 26px 0 26px;
-  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  margin: auto auto -9px 9px;
+  padding: 16px;
+  transition: background 0.3s ease;
+}
+.header-nav.on-desktop .theme-controler:hover {
+  background: var(--bgn-modal-low);
 }
 
 @media (max-width: 540px) {
@@ -213,9 +234,6 @@ body.dark-theme {
   right: 10px;
   bottom: 10px;
 }
-.header-nav.on-mobile .navigation {
-  justify-content: space-evenly;
-}
 .header-nav.on-mobile .navigation .link-page {
   flex-direction: column;
   justify-content: center;
@@ -227,18 +245,23 @@ body.dark-theme {
   color: var(--font-color-low);
 }
 .header-nav.on-mobile .navigation .current-link {
-  background: var(--bgn-modal-base);
-  border-radius: 12px;
   padding: 6px 9px;
-  font-weight: 555;
-  color: var(--font-color-medium);
 }
 
 @media (min-width: 540px) {
-  .header-nav.on-mobile {
+  .header-nav.on-mobile, .selective-manu {
     display: none;
   }
 }
+.selective-manu.on-mobile {
+  min-height: 80px;
+  border-radius: 999px;
+  background: tomato;
+}
+.selective-manu.on-mobile .logo-area {
+  display: none;
+}
+
 .full-logo {
   display: flex;
   align-items: center;

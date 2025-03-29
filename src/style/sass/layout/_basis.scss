@@ -7,22 +7,22 @@
    padding:    40px 0;
 }
 
-// Screen Control Width 
-.basis-layout {
-   width:     100%;
-   max-width: 1024px;
-   margin:    0 20px 20px 180px;
-}
 @media (max-width: 440px) {
-   .basis-layout {
-      width:         calc(100% - 40px);
-      margin-inline: auto;
+   .section-model {
+      padding: 20px 0;
    }
 }
 
-// Screen Control Width in-mobile
-@media (max-width: 440px) {
+// Screen Control Width 
+.basis-layout {
+   width:       calc(100% - 290px);
+   max-width:   1124px;
+   margin-left: 180px;
+   background:  var(--bgn-modal-base);
+}
+@media (max-width: 540px) {
    .basis-layout {
-      width: calc(100% - 40px);
+      width:         calc(100% - 40px);
+      margin-inline: auto;
    }
 }
